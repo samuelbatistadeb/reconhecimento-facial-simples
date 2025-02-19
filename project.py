@@ -11,7 +11,7 @@ def processar_imagem(imagem_path):
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
     # Detectar rostos na imagem
-    faces = face_cascade.detectMultiScale(imagem_gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+    faces = face_cascade.detectMultiScale(imagem_gray, scaleFactor=1.1, minNeighbors=5, minSize=(15, 15))
 
     # Inicializar uma lista para os nomes das pessoas
     face_names = [f'#{i+1}' for i in range(len(faces))]
